@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.hilt)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -68,11 +69,13 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.navigation.compose)
     // endregion
 
     // region kotlin
     implementation(libs.kotlin.coroutines)
     implementation(libs.kotlin.coroutines.android)
+    implementation(libs.kotlinx.serialization)
     // endregion
 
     // region square
@@ -87,7 +90,7 @@ dependencies {
 
     // region hilt
     implementation(libs.hilt.android)
-    implementation(libs.hilt.navigation.compose)
+    implementation(libs.hilt.navigation)
     ksp(libs.hilt.compiler)
     // endregion
 

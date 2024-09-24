@@ -1,22 +1,34 @@
 package com.jlroberts1.itemlistproject
 
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.TopAppBarColors
+import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.jlroberts1.itemlistproject.domain.repository.ItemsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import javax.inject.Inject
 
+@OptIn(ExperimentalMaterial3Api::class)
+data class ScaffoldState(
+    val topAppBarTitle: @Composable () -> Unit = {},
+    val topAppBarColors: @Composable () -> TopAppBarColors = {
+        TopAppBarDefaults.topAppBarColors(
+            containerColor = Color.LightGray
+        )
+    },
+    val navigationIcon: @Composable () -> Unit = {}
+)
 
+@OptIn(ExperimentalMaterial3Api::class)
 @HiltViewModel
-class MainViewModel @Inject constructor(
-    itemsRepository: ItemsRepository
-) : ViewModel() {
+class MainViewModel @Inject constructor() : ViewModel() {
+    private val _scaffoldState = MutableStateFlow(ScaffoldState())
+    val scaffoldState = _scaffoldState.asStateFlow()
 
-    val items = itemsRepository.getItems(
-        onComplete = {},
-        onError = {}
-    ).stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000L), emptyList())
-
+    fun updateScaffoldState(scaffoldState: ScaffoldState) {
+        _scaffoldState.value = scaffoldState
+    }
 }

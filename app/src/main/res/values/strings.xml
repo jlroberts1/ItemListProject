@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ItemListProject</string>
+    <string name="item_groups_name">Item groups</string>
+    <string name="back_content_desc">Back</string>
+    <string name="items_for_group">Items for group %1$s</string>
+    <string name="group_label">Group %1$s</string>
 </resources>
