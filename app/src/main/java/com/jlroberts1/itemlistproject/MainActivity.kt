@@ -11,9 +11,25 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.jlroberts1.itemlistproject.data.httpclient.HttpClient
+import com.jlroberts1.itemlistproject.data.retrofit.RetrofitClient
+import com.jlroberts1.itemlistproject.data.serializer.Serializer
 import com.jlroberts1.itemlistproject.ui.theme.ItemListProjectTheme
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+    @Inject
+    lateinit var httpClient: HttpClient
+
+    @Inject
+    lateinit var retrofitClient: RetrofitClient
+
+    @Inject
+    lateinit var serializer: Serializer
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

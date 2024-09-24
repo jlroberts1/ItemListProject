@@ -21,6 +21,7 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        buildConfigField("String", "BASE_URL", "\"https://fetch-hiring.s3.amazonaws.com/\"")
     }
 
     buildTypes {
@@ -40,6 +41,7 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures {
+        buildConfig = true
         compose = true
     }
     composeOptions {
@@ -76,6 +78,8 @@ dependencies {
     // region square
     implementation(libs.retrofit)
     implementation(libs.moshi)
+    implementation(libs.moshi.kotlin)
+    implementation(libs.moshi.converter)
     implementation(platform(libs.okhttp.bom))
     implementation(libs.okhttp)
     implementation(libs.okhttp.logging.interceptor)
@@ -86,6 +90,9 @@ dependencies {
     implementation(libs.hilt.navigation.compose)
     ksp(libs.hilt.compiler)
     // endregion
+
+    // region other
+    implementation(libs.sandwich.retrofit)
 
     // region test
     testImplementation(libs.junit)
