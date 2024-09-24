@@ -1,5 +1,6 @@
 package com.jlroberts1.itemlistproject.di
 
+import com.jlroberts1.itemlistproject.data.api.ItemsAPI
 import com.jlroberts1.itemlistproject.data.httpclient.HttpClient
 import com.jlroberts1.itemlistproject.data.httpclient.HttpClientImpl
 import com.jlroberts1.itemlistproject.data.retrofit.RetrofitClient
@@ -32,5 +33,11 @@ object ApplicationModule {
     @Provides
     fun provideSerializer(serializer: SerializerImpl): Serializer {
         return serializer
+    }
+
+    @Singleton
+    @Provides
+    fun provideItemsAPI(retrofitClient: RetrofitClient): ItemsAPI {
+        return retrofitClient.client.create(ItemsAPI::class.java)
     }
 }
