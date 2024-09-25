@@ -1,4 +1,4 @@
-package com.jlroberts1.itemlistproject.ui.theme.items
+package com.jlroberts1.itemlistproject.presentation.items
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

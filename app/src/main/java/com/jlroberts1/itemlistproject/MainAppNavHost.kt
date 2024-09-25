@@ -15,9 +15,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
-import com.jlroberts1.itemlistproject.ui.theme.composables.getGroupColor
-import com.jlroberts1.itemlistproject.ui.theme.itemgroups.ItemGroupsScreen
-import com.jlroberts1.itemlistproject.ui.theme.items.ItemsScreen
+import com.jlroberts1.itemlistproject.presentation.composables.getGroupColor
+import com.jlroberts1.itemlistproject.presentation.itemgroups.ItemGroupsScreen
+import com.jlroberts1.itemlistproject.presentation.items.ItemsScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

@@ -1,4 +1,4 @@
-package com.jlroberts1.itemlistproject.ui.theme.composables
+package com.jlroberts1.itemlistproject.presentation.composables
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize

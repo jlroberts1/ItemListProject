@@ -1,4 +1,4 @@
-package com.jlroberts1.itemlistproject.ui.theme.itemgroups
+package com.jlroberts1.itemlistproject.presentation.itemgroups
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -14,8 +14,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.jlroberts1.itemlistproject.ui.theme.composables.GroupListItem
-import com.jlroberts1.itemlistproject.ui.theme.composables.LoadingIndicator
+import com.jlroberts1.itemlistproject.presentation.composables.GroupListItem
+import com.jlroberts1.itemlistproject.presentation.composables.LoadingIndicator
 
 @Composable
 fun ItemGroupsScreen(

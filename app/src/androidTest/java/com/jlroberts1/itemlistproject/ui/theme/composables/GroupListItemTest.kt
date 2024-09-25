@@ -5,6 +5,7 @@ import androidx.compose.ui.test.hasClickAction
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
+import com.jlroberts1.itemlistproject.presentation.composables.GroupListItem
 import org.junit.Rule
 import org.junit.Test
 

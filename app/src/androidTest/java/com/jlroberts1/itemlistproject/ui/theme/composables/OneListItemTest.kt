@@ -3,6 +3,7 @@ package com.jlroberts1.itemlistproject.ui.theme.composables
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
+import com.jlroberts1.itemlistproject.presentation.composables.OneListItem
 import org.junit.Rule
 import org.junit.Test
 

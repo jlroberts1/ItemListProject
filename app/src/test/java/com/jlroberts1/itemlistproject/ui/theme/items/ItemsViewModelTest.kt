@@ -4,6 +4,7 @@ import app.cash.turbine.test
 import com.google.common.truth.Truth.assertThat
 import com.jlroberts1.itemlistproject.domain.models.Item
 import com.jlroberts1.itemlistproject.domain.repository.ItemsRepository
+import com.jlroberts1.itemlistproject.presentation.items.ItemsViewModel
 import io.mockk.coEvery
 import io.mockk.mockk
 import io.mockk.slot
