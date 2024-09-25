@@ -43,7 +43,7 @@ class ItemsViewModel @Inject constructor(
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000L), emptyList())
 
     fun setListId(listId: Int) {
-        this.listId.value = listId
+        this.listId.update { listId }
     }
 
     private fun geItemNumbers(name: String): Int {

@@ -99,6 +99,10 @@ dependencies {
 
     // region test
     testImplementation(libs.junit)
+    testImplementation(libs.turbine)
+    testImplementation(libs.truth)
+    testImplementation(libs.coroutines.test)
+    testImplementation(libs.mockk)
     // endregion
 
     // region androidTest
